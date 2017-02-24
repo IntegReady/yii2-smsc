@@ -20,7 +20,7 @@ SMSCenter
 ```php
 'components' => [
     'SMSCenter' => [
-        'class' => 'nikitich\smsc\SMSCenter',
+        'class' => 'integready\smsc\SMSCenter',
         'login' => 'YourLogin',
         'password' => 'YourPa$$w0rd',
         'useSSL' => false,
@@ -43,6 +43,9 @@ SMSCenter
 Примеры использования:
 ```php
 <?php
+
+use integready\smsc\SMSCenter;
+
 // Инициализация
 $smsc = Yii::$app->SMSCenter;
 
@@ -70,7 +73,7 @@ Yii::$app->SMSCenter->getCostMulti([
 ]);
 
 // Получение баланса
-Yii::$app->SMSCenter->getBalance(), ' руб.'; // "72.2 руб."
+Yii::$app->SMSCenter->getBalance(); // ' руб.'; // "72.2 руб."
 
 // Получение информации об операторе
 Yii::$app->SMSCenter->getOperatorInfo('7991111111');
@@ -79,8 +82,8 @@ Yii::$app->SMSCenter->getOperatorInfo('7991111111');
 Yii::$app->SMSCenter->getStatus('+7991111111', 6, SMSCenter::STATUS_INFO_EXT);
 
 // Проверка тарифной зоны
-if (Yii::$app->SMSCenter->getChargingZone('+79991111111') == self::ZONE_RU) {
-    ...
+if (Yii::$app->SMSCenter->getChargingZone('+79991111111') == SMSCenter::ZONE_RU) {
+    // ...
 }
 ```
 

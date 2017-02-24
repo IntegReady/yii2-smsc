@@ -1,9 +1,9 @@
 {
-  "name": "nikitich/yii2-smsc",
+  "name": "integready/yii2-smsc",
   "description": "Yii2 smsc.ru extension",
   "type": "yii2-extension",
   "keywords": ["yii2","extension","helpers","sms","smsc","smscenter","smsc.ru"],
-  "homepage": "https://github.com/nikitich/yii2-smsc",
+  "homepage": "https://github.com/IntegReady/yii2-smsc",
   "license": "Apache-2.0",
   "authors": [
     {
@@ -15,10 +15,12 @@
   "require": {
     "yiisoft/yii2": "*"
   },
+  "require-dev": {
+    "yiisoft/yii2-coding-standards": "*"
+  },
   "autoload": {
     "psr-4": {
-      "nikitich\\smsc\\": ""
+      "integready\\smsc\\": ""
     }
   }
-
 }
